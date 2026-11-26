@@ -1,0 +1,135 @@
+@import url("../../../styles.css");
+
+/* 프로젝트 상세 페이지 공통 스타일 */
+.project-detail {
+  --project-width: 1200px;
+  --project-section-gap: 64px;
+  --project-image-gap: 32px;
+  padding-top: 32px;
+  padding-bottom: 80px;
+  text-align: left;
+}
+.project-content {
+  width: 100%;
+  max-width: var(--project-width);
+  margin: 0 auto 0 0;
+}
+.project-intro {
+  margin: 0 0 var(--project-section-gap);
+}
+.project-tagline {
+  margin: 0 0 2px;
+  font-size: 1.05rem;
+  color: #444;
+}
+.project-title {
+  margin: 0;
+  font-size: clamp(1.65rem, 3vw, 2rem);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.045em;
+}
+.project-meta {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 3px 0;
+  margin: 24px 0 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+.project-meta dt {
+  font-weight: 700;
+}
+.project-meta dd {
+  margin: 0;
+  color: #555;
+}
+.project-section {
+  margin: 0 0 var(--project-section-gap);
+}
+.project-section-title {
+  margin: 0 0 32px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.4;
+}
+.project-text + .project-text {
+  margin-top: 32px;
+}
+.project-subtitle {
+  margin: 0 0 5px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+.project-text p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #444;
+  letter-spacing: -0.025em;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.project-text p + p {
+  margin-top: 16px;
+}
+.project-text strong {
+  font-weight: 700;
+  color: #111;
+}
+.project-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin: 0 0 var(--project-image-gap);
+}
+.project-section:has(+ .project-image) {
+  margin-bottom: var(--project-image-gap);
+}
+.project-image + .project-section {
+  margin-top: var(--project-section-gap);
+}
+.project-image + .project-image {
+  margin-top: 0;
+}
+/* 맨 위로 이동 버튼 */
+.top-button {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #111;
+  border-radius: 50%;
+  background: #fff;
+  color: #111;
+  font-size: 1.4rem;
+  cursor: pointer;
+  z-index: 100;
+  transition: 0.25s ease;
+}
+
+.top-button:hover {
+  background: #111;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  .project-detail {
+    --project-section-gap: 44px;
+    --project-image-gap: 24px;
+    padding-top: 24px;
+  }
+  .project-meta {
+    grid-template-columns: 90px minmax(0, 1fr);
+  }
+  .project-section-title {
+    margin-bottom: 24px;
+  }
+  .project-text br {
+    display: none;
+  }
+}
