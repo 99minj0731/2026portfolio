@@ -1,6 +1,6 @@
-@import url("./styles.css");
+@import url("../styles.css");
 
-/* 각 프로젝트 부모 css */
+/* 카테고리 선택할 시 2번째 css */
 .archive-label {
   margin: 1rem 0 0.8rem;
   font-size: 0.8rem;
@@ -124,7 +124,7 @@
 }
 /* Thumbnail layout */
 .design-grid {
-  --thumb-height: 40rem;
+  --thumb-height: 30rem;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
